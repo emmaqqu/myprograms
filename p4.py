@@ -10,7 +10,7 @@ while start < new_stop:
         dividend = num // start
         if start != dividend:
             factor_count += 2
-            print(f"{start} and {dividend} is a factor of {num}.")
+            print(f"{start} and {dividend} are factors of {num}.")
         else:
             factor_count += 1
     start += 1
