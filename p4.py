@@ -3,7 +3,7 @@ start = 1
 end = int(input("Enter a number: "))
 factor_count = 0
 
-while start <= end:
+while start <= end: # linear complex program - proportional to input size
     result = end / start
     if end % start == 0:
         print(f"{end} has a factor of {start}")
