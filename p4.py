@@ -1,16 +1,17 @@
 # Factors of a Number
+import math
 start = 1
-end = int(input("Enter a number: "))
+num = int(input("Enter a number: "))
+new_stop = int(math.sqrt(num)) + 1
 factor_count = 0
 
-while start <= end: # linear complex program - proportional to input size
-    result = end / start
-    if end % start == 0:
-        print(f"{end} has a factor of {start}")
-        factor_count +=1
+while start < new_stop:
+    if num % start == 0:
+        dividend = num // start
+        if start != dividend:
+            factor_count += 2
+            print(f"{start} and {dividend} is a factor of {num}.")
+        else:
+            factor_count += 1
     start += 1
-print(f"{end} has {factor_count} total factors")
-if factor_count == 2:
-    print(f"{end} is a prime number.")
-else:
-    print(f"{end} is a composite number.")
+print(f"{num} has {factor_count} total factors.")
