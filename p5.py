@@ -25,7 +25,9 @@ while True:
 
     user_input = input("Want to play again: Yes/no ")
     user_input = user_input.lower()
-    if user_input == "no":
+    if user_input == "yes":
+        continue
+    else:
         break
 
 print("Thanks for playing!")
